@@ -125,7 +125,7 @@
             <section>
                <div class="centered">
                     <h1>Pricing</h1>
-                    <p class="default mt-2">Aufgrund des Performance-based Pricing zahlst Du bei uns nur das, was Du auch wirklich brauchst.</p>
+                    <p class="default mt-2">Aufgrund des Performance-based Pricing zahlst Du bei uns nur das, was Du auch wirklich bekommst.</p>
                </div>
                <div class="full-img-wrapper desktop">
                    <img src="imgs/pricing.svg" width="100%">
@@ -218,10 +218,10 @@
 
     <script>
         const accordion = document.getElementsByClassName("accordion");
+        const expanded = document.getElementsByClassName("accordion-expanded");
         for(let i = 0; i < accordion.length; i++) {
             accordion[i].addEventListener("click", () => {
-                this.classList.toggle("active");
-                const panel = this.nextElementSibling;
+                const panel = expanded[i];
                 if(panel.style.display === "block") {
                     panel.style.display = "none";
                 } else {
